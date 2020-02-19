@@ -123,7 +123,7 @@ include("includes/dbcon.php");
 
                 <p><!-- p Begin -->
 
-                <strong>ddrisworld inc</strong>
+                <strong>zangawears inc</strong>
                     <br/><?php echo $address; ?>,
                     <br/> <?php echo $state; ?> State,
                     <br/> <?php echo $country; ?>.

@@ -43,7 +43,7 @@ if(!isset($_SESSION['user_id']))
         <br>
         <div class="table table-responsive">
             <h4 class="text-center">Online Users</h4>
-            <p class="text-left"><a href="https://localhost/zangawears/admin_area/index.php?dashboard" class="btn btn-success btn-sm">Dashboard</a> </p>
+            <p class="text-left"><a href="https://www.e-acez.com/zangawears/admin_area/index.php?dashboard" class="btn btn-success btn-sm">Dashboard</a> </p>
             <p class="text-right">Hi - <?php echo $_SESSION['username'];?> - <a href="logout.php">Log Out</a></p>
             <div id="user_details"> </div>
             <div id="user_model_details"></div>

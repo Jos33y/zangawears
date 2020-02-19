@@ -15,13 +15,13 @@ if(isset($_GET['edit_shop_profile'])){
 
     $edit_id = $_GET['edit_shop_profile'];
 
-    $get_shop = "select * from customer_info where customer_id = '$edit_id'";
+    $get_shop = "select * from user_db where user_id = '$edit_id'";
 
     $run_edit = mysqli_query($conn, $get_shop);
 
     $row_edit = mysqli_fetch_array($run_edit);
 
-    $customer_id = $row_edit['customer_id'];
+    $customer_id = $row_edit['user_id'];
 
     $shop_name = $row_edit['business_name'];                                      
 
@@ -30,7 +30,7 @@ if(isset($_GET['edit_shop_profile'])){
     $shop_about = $row_edit['about'];
 
 
-    $get_payment = "select * from payment where email='$shop_email'";
+    $get_payment = "select * from dashboard_db where user_id='$customer_id'";
 
     $run_payment = mysqli_query($conn, $get_payment);
 
@@ -222,8 +222,8 @@ if(isset($_POST['update'])){
             $run_shop_logo = mysqli_query($con, $update_shop_logo);
         }
 
-     $update_shop_info = "update customer_info set 
-     business_name='$b_name', email='$email', about='$b_about' where customer_id='$customer_id'";
+     $update_shop_info = "update user_db set 
+     business_name='$b_name', email='$email', about='$b_about' where user_id='$customer_id'";
 
     $run_shop_info = mysqli_query($conn, $update_shop_info);
 

@@ -7,22 +7,22 @@ include("includes/header.php");
 
 if(!isset($_SESSION['email'])){
 
-   echo "<script>window.open('https://localhost/eaccezz/sign-in.php', '_self')</script>";
+   echo "<script>window.open('https://www.e-acez.com/eaccezz/sign-in.php', '_self')</script>";
 
 }else{
     $admin_session = $_SESSION['email'];
 
-    $get_admin = "select * from customer_info where email = '$admin_session'";
+    $get_admin = "select * from user_db where email = '$admin_session'";
 
     $run_admin = mysqli_query($conn, $get_admin);
 
     $row_admin = mysqli_fetch_array($run_admin);
 
-    $admin_id = $row_admin['customer_id'];
+    $admin_id = $row_admin['user_id'];
 
-    $admin_name = $row_admin['firstname'];
+    $admin_name = $row_admin['first_name'];
 
-    $admin_name2 = $row_admin['lastname'];
+    $admin_name2 = $row_admin['last_name'];
 
     $shop_name = $row_admin['business_name'];
 
@@ -37,8 +37,6 @@ if(!isset($_SESSION['email'])){
     $admin_country = $row_admin['country'];
 
     $admin_about = $row_admin['about'];
-
-    $admin_job = $row_admin['job_position'];
 
     $admin_image = $row_admin['profile_image'];
 

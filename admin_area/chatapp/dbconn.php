@@ -2,9 +2,13 @@
 
 $connect = new PDO("mysql:host=localhost;dbname:ecom_store_doris;charset=utf8mb4", "Joseey", "");
 
-$conn = mysqli_connect("localhost", "Joseey", "", "ecom_store_doris");
+//$conn = mysqli_connect("localhost", "Joseey", "", "ecom_store_doris");
 
-$con = mysqli_connect("localhost", "Joseey", "", "eacez_db");
+$conn = mysqli_connect("localhost", "u721127448_Zanga", "LagbaluJ19", "u721127448_zangawears");
+
+//$con = mysqli_connect("localhost", "Joseey", "", "eacez_db");
+
+$con = mysqli_connect("localhost", "u721127448_Admin", "LagbaluJ19", "u721127448_eacez");
 
 
 date_default_timezone_set('Africa/Lagos');

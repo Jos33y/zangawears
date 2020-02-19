@@ -2,7 +2,7 @@
 
 if(!isset($_SESSION['email'])){
 
-    echo "<script>window.open('https://localhost/eaccezz/sign-in.php', '_self')</script>";
+    echo "<script>window.open('https://www.e-acez.com/sign-in.php', '_self')</script>";
  
  }else{
 

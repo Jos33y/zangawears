@@ -109,12 +109,12 @@ include("includes/dbcon.php");
 
                 <h6>Find Us:</h6>
                 <?php 
-                $customer_id = 2;
-                $get_address = "select * from customer_info where customer_id=$customer_id";
+                $customer_id = 3;
+                $get_address = "select * from user_db where user_id=$customer_id";
                 $run_address = mysqli_query($conn, $get_address);
                $row_add= mysqli_fetch_array($run_address);
-                    $first_name = $row_add['firstname'];
-                    $last_name = $row_add['lastname'];
+                    $first_name = $row_add['first_name'];
+                    $last_name = $row_add['last_name'];
                     $email = $row_add['email'];
                    $phone = $row_add['phone_number'];
                    $address = $row_add['address'];
@@ -124,7 +124,7 @@ include("includes/dbcon.php");
 
                 <p><!-- p Begin -->
 
-                <strong>ddrisworld inc</strong>
+                <strong>zangawears inc</strong>
                     <br/><?php echo $address; ?>,
                     <br/> <?php echo $state; ?> State,
                     <br/> <?php echo $country; ?>.

@@ -14,25 +14,23 @@ if(!isset($_SESSION['email'])){
 
 $email = $_SESSION['email'];          
 
-$get_customer_info = "select * from customer_info where email ='$email'";
+$get_customer_info = "select * from user_db where email ='$email'";
 
 $run_customer_info = mysqli_query($conn, $get_customer_info);
 
 $row_customer_info=mysqli_fetch_array($run_customer_info);
 
-     $admin_id = $row_customer_info['customer_id'];
+     $admin_id = $row_customer_info['user_id'];
 
-     $first_name = $row_customer_info['firstname'];
+     $first_name = $row_customer_info['first_name'];
 
-     $last_name = $row_customer_info['lastname'];
+     $last_name = $row_customer_info['last_name'];
      
      $image = $row_customer_info['profile_image'];
 
      $email = $row_customer_info['email'];
 
      $phone_no = $row_customer_info['phone_number'];
-
-     $job = $row_customer_info['job_position']; 
 
      $address = $row_customer_info['address'];
 

@@ -23,7 +23,7 @@ if(!isset($_SESSION['email'])){
         </button><!-- navbar-toggle Finish -->
 
         <a href="index.php?dashboard" class="navbar-brand">Admin </a>
-        <a href="http://localhost/zangawears/index.php" class="navbar-brand" target="_blank"><small>View Store </small> </a>
+        <a href="https://www.e-acez.com/zangawears/index.php" class="navbar-brand" target="_blank"><small>View Store </small> </a>
 
     </div><!-- navbar-header Finish -->
 

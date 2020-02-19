@@ -15,17 +15,17 @@ if(isset($_GET['edit_profile'])){
 
     $edit_id = $_GET['edit_profile'];
 
-    $get_admin = "select * from customer_info where customer_id = '$edit_id'";
+    $get_admin = "select * from user_db where user_id = '$edit_id'";
 
     $run_edit = mysqli_query($conn, $get_admin);
 
     $row_edit = mysqli_fetch_array($run_edit);
 
-    $admin_id = $row_edit['customer_id'];
+    $admin_id = $row_edit['user_id'];
 
-    $first_name = $row_edit['firstname'];
+    $first_name = $row_edit['first_name'];
     
-    $last_name = $row_edit['lastname'];
+    $last_name = $row_edit['last_name'];
     
     $dob = $row_edit['DOB'];
 
@@ -381,10 +381,10 @@ if(isset($_POST['update'])){
     move_uploaded_file($temp_name, "admin_images/$profile_img");
 
 
-    $update_personal_info = "update customer_info set
-    firstname='$firstname',  lastname= '$lastname', DOB='$dob', email='$p_email', phone_number='$p_phone', 
+    $update_personal_info = "update user_db set
+    first_name='$firstname',  last_name= '$lastname', phone_number='$p_phone', email='$p_email', DOB='$dob',  
     address='$p_address', state='$p_state', country='$p_country', profile_image='$profile_img', about='$p_about'
-    where customer_id='$admin_id'";
+    where user_id='$admin_id'";
 
     $run_profile = mysqli_query($conn, $update_personal_info);
 

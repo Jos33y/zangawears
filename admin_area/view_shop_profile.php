@@ -13,13 +13,13 @@ if(!isset($_SESSION['email'])){
 
                                     $email = $_SESSION['email'];
 
-                                    $get_shop_info = "select * from customer_info where email='$email'";
+                                    $get_shop_info = "select * from user_db where email='$email'";
 
                                     $run_shop_info = mysqli_query($conn, $get_shop_info);
 
                                     $row_shop_info=mysqli_fetch_array($run_shop_info);                       
 
-                                         $customer_id = $row_shop_info['customer_id'];
+                                         $customer_id = $row_shop_info['user_id'];
 
                                          $shop_name = $row_shop_info['business_name'];                                      
 
@@ -27,7 +27,7 @@ if(!isset($_SESSION['email'])){
 
                                          $shop_about = $row_shop_info['about'];
 
-                                    $get_payment = "select * from payment where email='$email'";
+                                    $get_payment = "select * from dashboard_db where user_id='$customer_id'";
 
                                     $run_payment = mysqli_query($conn, $get_payment);
 
