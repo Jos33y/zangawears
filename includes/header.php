@@ -142,7 +142,7 @@ if(isset($_GET['pro_id'])){
                   </div>
                   <div class="up-item">
                     <div class="shopping-card">
-                      <i class="fa fa-shopping-bag"></i>
+                      <i class="fa fa-shopping-cart"></i>
                       <span><?php items(); ?></span>
                     </div>
                     <a href="cart.php">Cart</a>

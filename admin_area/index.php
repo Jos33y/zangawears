@@ -7,7 +7,7 @@ include("includes/header.php");
 
 if(!isset($_SESSION['email'])){
 
-   echo "<script>window.open('https://www.e-acez.com/eaccezz/sign-in.php', '_self')</script>";
+   echo "<script>window.open('https://www.e-acez.com/sign-in.php', '_self')</script>";
 
 }else{
     $admin_session = $_SESSION['email'];
