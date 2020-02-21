@@ -28,12 +28,12 @@
         echo "
         <div class='text-center'>
 
-        <img class='customer-image' src='customer_images/$customer_image' width='200' height='200' alt='$customer_image' >
+        <img class='customer-image rounded' src='customer_images/$customer_image' width='200' height='200' alt='$customer_image' >
 
     </div>
     <br/>
 
-<h5 class='card-title text-center'> $lastname  $firstname</h5>
+        <h5 class='card-title text-center'> $lastname  $firstname</h5>
         
         ";
 
@@ -44,39 +44,39 @@
 
     <div class="card-body"><!--card-body begin -->
 
-        <ul class="nav nav-pills flex-column flex-sm-row category-menu"><!--nav nav-pills nav-stacked category-menu begin-->
+        <ul class="nav nav-pills flex-column flex-sm-row"><!--nav nav-pills nav-stacked category-menu begin-->
 
-                <li class="nav-item">
-                        <a  class="nav-link <?php if(isset($_GET['my_orders'])) {echo"active"; }  ?>" href="my_account.php?my_orders">
+                <li class="nav-item <?php if(isset($_GET['my_orders'])) {echo"active"; }?>">
+                        <a  class="nav-link" href="my_account.php?my_orders">
                                 <i class="fa fa-list"></i> My Orders   </a>
                 </li>
 
-                <li class="nav-item">
-                        <a class="nav-link <?php if(isset($_GET['pay_offline']))  {echo"active"; } ?>" href="my_account.php?pay_offline">
+                <li class="nav-item <?php if(isset($_GET['pay_offline']))  {echo"active"; } ?>">
+                        <a class="nav-link" href="my_account.php?pay_offline">
                                 <i class="fa fa-bolt"></i> Pay Offline
                         </a>
                 </li>
 
-                 <li class="nav-item">
-                        <a class="nav-link <?php if(isset($_GET['chat_seller']))  {echo"active"; } ?>" href="chatapp/login.php?chatapp=<?php echo $customer_email; ?>" target="_blank">
+                 <li class="nav-item <?php if(isset($_GET['chat_seller']))  {echo"active"; } ?>">
+                        <a class="nav-link" href="chatapp/login.php?chatapp=<?php echo $customer_email; ?>" target="_blank">
                                 <i class="fa fa-comments"></i> Chat with Seller
                         </a>
                 </li>
 
-                <li class="nav-item">
-                        <a  class="nav-link <?php if(isset($_GET['edit_account'])) {echo"active"; }  ?>" href="my_account.php?edit_account">
+                <li class="nav-item <?php if(isset($_GET['edit_account'])) {echo"active"; }  ?>">
+                        <a  class="nav-link" href="my_account.php?edit_account">
                                 <i class="fa fa-pencil"></i> Edit Account
                         </a>
                 </li>
 
-                <li class="nav-item">
-                        <a class="nav-link <?php if(isset($_GET['change_pass'])) {echo"active"; }  ?>" href="my_account.php?change_pass">
+                <li class="nav-item <?php if(isset($_GET['change_pass'])) {echo"active"; }  ?>">
+                        <a class="nav-link" href="my_account.php?change_pass">
                                 <i class="fa fa-user"></i> Change Passowrd
                         </a>
                 </li>
 
-                <li class="nav-item">
-                        <a  class="nav-link <?php if(isset($_GET['delete_account'])) {echo"active"; }  ?>" href="my_account.php?delete_account">
+                <li class="nav-item <?php if(isset($_GET['delete_account'])) {echo"active"; }  ?>">
+                        <a  class="nav-link" href="my_account.php?delete_account">
                                 <i class="fa fa-trash-o"></i> Delete Account
                         </a>
                 </li>

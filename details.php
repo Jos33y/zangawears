@@ -1,5 +1,5 @@
 <?php
-        $active ='Shopping Cart';
+        $active ='Shop';
         include("includes/header.php");
 ?>
 
@@ -35,10 +35,6 @@
                     <a href="index.php">Home</a>
                 </li>
 
-                <li class="breadcrumb-item">
-                     <a href="showroom.php">Shop</a>
-                </li>
-
                 <li class="breadcrumb-item active" aria-current="page">
                       <a href="showroom.php?p_cat=<?php echo $p_cat_id; ?>"> <?php echo $p_cat_title; ?> </a>
                 </li> 
@@ -52,8 +48,7 @@
 </div>
     </div>
 
-<div class="container"><!--row begin -->
-   
+    <div class="container"><!--row begin -->  
             <div id="productMain" class="row"><!-- col-sm-productMain Begin -->
                 <div class="col-md"><!-- col-sm-6 Begin -->
                     <div id="mainImage"><!-- mainImage Begin -->
@@ -138,13 +133,9 @@
                         <label for="" class="col-md-7 control-label">Products Quantity</label>
                         
                         <div class="col-md-7"><!--col-md-7 Begin-->
-                          <select name="product_qty" id="" class="form-control"><!--product_qty begin-->
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                          </select><!--product_qty Finish-->
+                         <div class="quy-input">
+                                  <input type="number" value="01" name="product_qty" class="form-control">
+                                </div>
                         </div><!--col-md-7 Finish-->
                         
                         </div><!--form-group Finish-->
@@ -152,7 +143,7 @@
                         <div class="form-group"><!--form-group Begin-->
                           <label class="col-md-5 control-label">Product Size</label>
                         
-                          <div class="col-md"><!--col-md-7 Begin-->
+                          <div class="col-md-5"><!--col-md-7 Begin-->
                           
                           <select name="product_size" class="form-control" required oninput="setCustomValidity('')" oninvalid="setCustomValidity('Must pick 1 size for product')" ><!--Select Finish-->
                           
@@ -176,24 +167,19 @@
                           </div><!--col-md-7 Finish-->
                         </div><!-- Form-group Finish-->
 
-                       
-                        <h4 class="text-center details-btn"><button class="btn btn-primary"> Add to cart <i class="fa fa-shopping-cart"></i></button></h4>
+                        
+                        <h4 class="text-center details-btn"><button class="site-btn btn-line"> ADD TO CART</button></h4>
                         
                       </form><!--form Finish-->
                  
                       <hr>
 
-
                           <h4 class="prod-details">Product Details</h4>
                                 <p>
 
                                 <?php echo $pro_desc; ?> 
-                                
                                 </p>
-                                       
-
-                      
-                                    <hr>
+                      <hr>
                       </div><!-- box Finish -->
 
                   
@@ -201,13 +187,13 @@
 
 
             </div><!-- productMain Finish -->
-
+<hr>
                 <div class="col-sm-12 box"><!-- box same-height headline Begin -->
-                  <h3 class="text-center details-title">Products you May Like</h3>
+                  <h3 class="text-center details-title">Related Products</h3>
                 </div><!-- box same-height headline Finish -->
 
                 
-    <div id="content" class="container-fluid"><!-- container-fluid begin -->
+    <div id="content" class="container"><!-- container-fluid begin -->
 
       <div class="row"><!-- row begin -->
 
@@ -226,41 +212,29 @@
                 $pro_img1 = $row_products['product_img1'];
 
                 $pro_price = $row_products['product_price']; 
-                echo "
 
-        <div class='top-box'><!-- Box Begin -->
+                $pro_label = $row_products['product_label'];
 
-                <table class='table'><!-- table Begin -->
+            ?>
 
-                    <tbody>
-                     <tr>
-                         <td colspan='8'>
-                         <a href='details.php?pro_id=$pro_id'>
-                              
-                         <img class='pro-images' src='admin_area/product_images/$pro_img1' alt='product_image'><br>
-                            
-                                <span class='pro-name'>$pro_title </span><br>
-                                  <span class='pro-price'> &#8358; $pro_price </span> 
-                             
-                     </a>
-                         </td>
-                      </tr>
-                    </tbody>
-
-                </table>
-        </div>
-        
-
-                    ";
-              }
-
-
-
-
-              ?>
+                                   <div class="mix col-lg-3 col-md-6 new">
+                                        <div class="product-item">
+                                            <figure>
+                                            <img class='img-fluid' src='admin_area/product_images/<?php echo $pro_img1; ?>' alt='product_image'>
+                                            <div class="bache"><?php echo $pro_label; ?> </div>
+                                            </figure>
+                                            <div class="product-info">
+                                            <h6><?php echo $pro_title; ?> </h6>
+                                            <p>&#8358;<?php echo $pro_price; ?></p>
+                                            <a href="details.php?pro_id=<?php echo $pro_id; ?>" class="site-btn btn-line">ADD TO CART</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  <?php } ?>
+                        </div><!-- row finish -->
+                    </div><!-- container-fluid finish -->
              
           </div><!-- same-height-row Finish -->
-
 
         </div><!-- col-sm-9 Finish -->
       

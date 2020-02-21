@@ -14,7 +14,7 @@
                     <a href="index.php">Home</a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
-                    Shop
+                    Showroom
                 </li>
             </ol><!-- breadcrumb Finish -->
 </nav>
@@ -30,37 +30,20 @@
 
         if(!isset($_GET['p_cat'])){
 
-         
-
-            
-
                         echo "
-                            <div class='box'><!-- box Begin -->
-                                <h2>Shop</h2>
-                                    <p>
-                                    A clothes shop or clothes store is any shop which sells items of ready-made clothing.
-                                     A small shop which sells expensive or designer clothing may be called a boutique.
-                                    </p>
-                            </div><!--Box Finish -->
+                            
+                                <h2 class='text-center' > Showroom </h2>
+                                <br>
 
                             ";
                 }
             
-
             ?>
         </div>
 </div>
           
-
-            <div class="row shop products"><!--row begin -->
-
-             <div class="table-responsive"><!-- table Responsive Begin -->
-
-                <table class="table shop"><!-- table Begin -->
-
-                  <tbody><!-- Tbody Begin -->
-                    
-                        <tr>
+    <div class="container"><!-- container begin -->
+      <div class="row"><!-- row begin -->
                 
                 <?php
 
@@ -95,34 +78,27 @@
 
                                     $pro_img1 = $row_products['product_img1'];
 
+                                    $pro_label = $row_products['product_label'];
+
                                     ?>
                 
-                                    <td>
-                                    <a href="details.php?pro_id=<?php echo $pro_id; ?>">
-                                      
-                                        <img class="top-images" src="admin_area/product_images/<?php echo $pro_img1; ?>" alt="product_image"><br>
-                                           
-                                               <span class="top-name"> <?php echo $pro_title; ?></span><br>
-                                                 <span class="top-price"> &#8358; <?php echo $pro_price; ?></span> 
-                                            
-                                    </a>
-        
-                                  
-                                  </td>
-
+                                    <div class="mix col-lg-3 col-md-6 new">
+                                        <div class="product-item">
+                                            <figure>
+                                            <img class='img-fluid' src='admin_area/product_images/<?php echo $pro_img1; ?>' alt='product_image'>
+                                            <div class="bache"><?php echo $pro_label; ?> </div>
+                                            </figure>
+                                            <div class="product-info">
+                                            <h6><?php echo $pro_title; ?> </h6>
+                                            <p>&#8358;<?php echo $pro_price; ?></p>
+                                            <a href="details.php?pro_id=<?php echo $pro_id; ?>" class="site-btn btn-line">ADD TO CART</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                   <?php } ?>
-
-                                </tr>
-        
-                              </tbody><!-- Finish -->
-        
-                        </table><!-- table Finish -->
-                      
-                     </div><!-- table-responsive Finish -->
-        
-                </div><!--col-md-4 col-sm-6 center-responsive Finish -->
-
-            </div><!--row Finish -->
+                        </div><!-- row finish -->
+                    </div><!-- container-fluid finish -->
+    
 </div>
            
 

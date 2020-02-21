@@ -90,7 +90,10 @@ if(isset($_GET['pro_id'])){
 
 
 <body>
-      
+      <!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
       <?php  
        $get_logo = "select * from logo";
        $run_logo = mysqli_query($con, $get_logo);
@@ -141,38 +144,37 @@ if(isset($_GET['pro_id'])){
                ?>
                 </li>
                    
-                  </div>
+                </div>
                   <div class="up-item">
                     <div class="shopping-card">
-                      <i class="fa fa-shopping-bag"></i>
+                      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                       <span><?php items(); ?></span>
                     </div>
-                    <a href="../cart.php">Shopping Cart</a>
+                    <a href="../cart.php">Cart</a>
                   </div>
                 </div>
               </div>
               </div>
-       
 			</div>
     </div> 
-                <nav class="navbar navbar-expand-sm main-navbar">
+                
+    <nav class="navbar navbar-dark navbar-expand-md  sticky-top">
+        <div class="container-fluid">     
 
-                <button class="navbar-toggler " type="button" data-toggle="collapse" 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" 
             data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon my-toggler "></span>
               </button>
-
               <div class="collapse navbar-collapse"></div>
 
               <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav mr-auto">
-
                       <li class="nav-item <?php if($active=='Home') echo'active'; ?>"><a class="nav-link" href="../index.php" >Home</a></li>
                     <li class="nav-item <?php if($active=='Shop') echo'active'; ?>"><a class="nav-link" href="../showroom.php">Showroom</a>
                       
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item <?php if($active=='Account') echo'active'; ?>">
                           <?php        
                              if(!isset($_SESSION['customer_email'])){
 
@@ -190,7 +192,7 @@ if(isset($_GET['pro_id'])){
                       <li class="nav-item"><a class="nav-link <?php if($active=='Contact Us') echo'active'; ?>" href="../contactus.php" >Contact Us</a></li>
                      
                     </ul>
-                              </div> 
+                  </div> 
                 </nav> 
       </header>
                 

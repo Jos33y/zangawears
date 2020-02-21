@@ -9,7 +9,21 @@ $run_cart = mysqli_query($con, $select_cart);
 $count =mysqli_num_rows($run_cart);
 
 ?>
-<?php
+
+                   
+						<div class="order-card">
+							<div class="order-details">
+								<div class="od-warp">
+									<h4 class="checkout-title">Your order</h4>
+									<table class="order-table">
+										<thead>
+											<tr>
+												<th>Product</th>
+												<th>Total</th>
+											</tr>
+										</thead>
+										<tbody>
+                                        <?php
                             $total =0;
 
                     while($row_cart = mysqli_fetch_array($run_cart)){
@@ -37,62 +51,49 @@ $count =mysqli_num_rows($run_cart);
                         $total += $sub_total;
                     
                     ?>
-                    <?php } }?>
-
-<div id="order-summary" class="box"><!--#order-summary Begin -->
-
-<div class="box-header">
-
-    <h4>Order Summary</h4>
-
-</div>
-
-<p class="text-muted">
-
-Shipping and additional costs are calculated based on value you provide
-</p>
-
-<div class="table-responsive">
-
-<table class="table"><!--table Begin -->
-
-    <tbody  style="color: #f2f1f6;">
-
-    <tr>
-
-        <td> Order Sub-Total </td>
-        <th> &#8358; <?php echo $total; ?>  </th>
-    </tr>
-
-    <tr>
-
-        <td> Shipping and Handling</td>
-        <td>&#8358; 0</td>
-    </tr>
-
-    <tr>
-
-        <td> Tax </td>
-        <td> &#8358; 0 </td>
-    </tr>
-
-    <tr class="total">
-
-        <td> Total</td>
-        <td> &#8358; <?php echo $total; ?></td>
-    </tr>
-    </tbody>
-
-    
-
-</table>
-</div>
-<div class="text-center"><!-- pull-right Begin -->
-         
-         <a href="cart.php" class="btn btn-primary btn-sm">
-            <i class="fa fa-shopping-cart" ></i> Return to cart
-         </a>
-
-     </div><!-- pull-right Finish -->
-
-</div><!--order-summary Finish -->
+                  
+											<tr>
+												<td><?php echo $product_title; ?></td>
+												<td>&#8358;<?php echo $sub_total; ?></td>
+                                            </tr>
+                                            <?php } }?>
+											<tr>
+												<td>SubTotal</td>
+												<td>&#8358;<?php echo $total; ?></td>
+											</tr>
+											<tr class="cart-subtotal">
+												<td>Shipping</td>
+												<td>Free</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr class="order-total">
+												<th>Total</th>
+												<th>&#8358;<?php echo $total; ?></th>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+								<div class="payment-method">
+									<div class="pm-item">
+										<input type="radio" name="pm" id="one">
+										<label for="one">Paypal</label>
+									</div>
+									<div class="pm-item">
+										<input type="radio" name="pm" id="two">
+										<label for="two">Cash on delievery</label>
+									</div>
+									<div class="pm-item">
+										<input type="radio" name="pm" id="three">
+										<label for="three">Credit card</label>
+									</div>
+									<div class="pm-item">
+										<input type="radio" name="pm" id="four" checked>
+										<label for="four">Direct bank transfer</label>
+									</div>
+								</div>
+							</div>
+							<button name="save" class="site-btn btn-full">Place Order</button>
+						</div>
+					</div>
+				</div>

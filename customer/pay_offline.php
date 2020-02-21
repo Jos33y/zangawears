@@ -1,19 +1,10 @@
-<div class="container"><!-- container Begin-->
-    
-    <div class="text-center"><!-- text-center Begin-->
-
-        <h3> Pay Offline Using This Method</h3>
-
-        <p class="text-muted">
-
-        If you have any questions, feel free to <a href="contactus.php">contact us.</a> Our customer service works 24/7
-        </p>
-        <p class="text-muted">
-
-       After payment confirm order from my orders section.
-        </p>
-
-    </div><!-- text-center Finish-->
+<div class="container">
+                    <div class="text-center contact-title"><!-- Center Begin -->
+                        <h4> Pay Offline Using This Method</h4>
+                        <p class="text-muted">  After payment confirm order from MY ORDERS section.</p>
+                        <p class="text-muted ">
+                            If you have any questions, feel free to <a href="../contactus.php">contact us.</a>  </p>
+                    </div><!-- Center Finish  -->
 
     <div class="table-responsive"><!-- table- responsive Begin-->
 
@@ -27,7 +18,7 @@
             <tr class="text-center"><!-- row Begin-->
 
 
-                <th colspan="2"> Bank Account Details: </th>
+                <th colspan="2"> Bank Account Details </th>
                 <?php 
                 $get_bank = "select * from bank_details";
                 $run_bank = mysqli_query($con, $get_bank);
@@ -47,7 +38,7 @@
 
             <tr><!-- row Begin-->
 
-                <th> Bank Name: </th>
+                <th> Bank Name </th>
                 <td> <?php  echo $bank_name; ?> </td>
                
 
@@ -59,7 +50,7 @@
 
             <tr><!-- row Begin-->
 
-                <th> Account Name: </th>
+                <th> Account Name </th>
                 <td> <?php echo $account_name ?></td>
                
 
@@ -71,7 +62,7 @@
 
             <tr><!-- row Begin-->
 
-                <th> Account No: </th>
+                <th> Account No </th>
                 <td> <?php echo $account_no ?> </td>
                
                 <?php } ?>

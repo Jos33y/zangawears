@@ -22,60 +22,43 @@
         </div><!-- col-md-12 Finish -->
 </div>
 
-<div class="row justify-content-center"><!--row begin -->
-
-        <div class="col-sm-8"><!-- col-sm-9 Begin -->
-        
-            <div class="box"><!-- box Begin -->
-
-                <div class="box-header"><!-- box-header Begin -->
-
+            <div class="container">
                     <div class="text-center"><!-- Center Begin -->
-
-                        <h2> Feel free to Contact Us</h2>
-
-                        <p class="text-muted"><!-- text-muted Begin -->
-
-                            If you have any questions, feel free to contact us. Our customer service works <strong>24/7</strong>
-
-                        </p><!-- text-muted finish -->
+                        <h4 class="contact-title"> Feel Free to Contact Us</h4>
 
                     </div><!-- Center Finish  -->
 
-                </div><!-- box-header Finish -->
-
-                    <form action="contactus.php" method="post"><!--form Begin -->
-
-                        <div class="form-group"><!--form-group Begin -->
+                    <form action="contactus.php" method="post" class="contact-form"><!--form Begin -->
+                        <div class="row">
+                        <div class="form-group col-md-6"><!--form-group Begin -->
 
                             <label for="Name">Name</label>
                             <input type="text" name="name" id="name" class="form-control" required>
                         </div><!--form-group Finish -->
 
-                        <div class="form-group"><!--form-group Begin -->
+                        <div class="form-group col-md-6"><!--form-group Begin -->
 
                             <label for="email">Email</label>
                             <input type="email" name="email" id="email" class="form-control" required>
                         </div><!--form-group Finish -->
 
-                        <div class="form-group"><!--form-group Begin -->
+                        <div class="form-group col-md-12"><!--form-group Begin -->
 
                             <label for="subject">Subject</label>
                             <input type="text" name="subject" id="subject" class="form-control" required>
                         </div><!--form-group Finish -->
 
-                        <div class="form-group"><!--form-group Begin -->
+                        <div class="form-group col-md-12"><!--form-group Begin -->
 
                             <label for="message">Message</label>
                             <textarea name="message" id="" cols="30" rows="10" class="form-control" required></textarea>
-                        </div><!--form-group Finish -->
 
                         <div class="text-center"><!--text-center Begin -->
-
-                            <button type="submit" name="submit" class="btn btn-primary">
-                            <i class="fa fa-user-md"></i> Send Message
+                            <button type="submit" name="submit" class="site-btn">
+                             Send Message
                             </button>
                         </div><!--text-center Finish -->
+                        </div><!--form-group Finish -->
 
                     </form><!-- Form  Finish -->
                 
@@ -133,9 +116,6 @@
         include("includes/footer.php");
 
         ?>
-
-
-
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 

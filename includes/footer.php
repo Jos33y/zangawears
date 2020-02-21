@@ -107,14 +107,15 @@ include("includes/dbcon.php");
              
             <div class="col"><!-- col-sm-6 col-md-3 Begin -->
 
-                <h6>Find Us:</h6>
+                <h6>Find Us</h6>
                 <?php 
                 $customer_id = 3;
-                $get_address = "select * from user_db where user_id=$customer_id";
+            // $get_address = "select * from user_db where user_id=$customer_id";
+                $get_address = "select * from customer_info where customer_id=$customer_id";
                 $run_address = mysqli_query($conn, $get_address);
-               $row_add= mysqli_fetch_array($run_address);
-                    $first_name = $row_add['first_name'];
-                    $last_name = $row_add['last_name'];
+                $row_add= mysqli_fetch_array($run_address);
+                    $first_name = $row_add['firstname'];
+                    $last_name = $row_add['lastname'];
                     $email = $row_add['email'];
                    $phone = $row_add['phone_number'];
                    $address = $row_add['address'];
@@ -171,7 +172,7 @@ include("includes/dbcon.php");
                     <?php 
                 $get_social = "select * from social_link";
                 $run_social = mysqli_query($con, $get_social);
-               while($row_social= mysqli_fetch_array($run_social)){
+                $row_social= mysqli_fetch_array($run_social);
                    $fb = $row_social['facebook'];
                    $tweet = $row_social['twitter'];
                    $insta = $row_social['instagram'];
@@ -182,14 +183,13 @@ include("includes/dbcon.php");
 ?>
 
                     <p class="social">
-                        <a href="https://<?php echo $fb; ?>" target="_blank" class="fa fa-facebook"></a>
-                        <a href="https://<?php echo $tweet; ?>" target="_blank"  class="fa fa-twitter"></a>
-                        <a href="https://<?php echo $insta; ?>" target="_blank" class="fa fa-instagram"></a>
-                        <a href="https://<?php echo $whatsapp; ?>" target="_blank" class="fa fa-whatsapp"></a>
+                        <a href="https://<?php echo $fb; ?>" target="_blank"class="fa fa-facebook" aria-hidden="true"></a>
+                        <a href="https://<?php echo $tweet; ?>" target="_blank"  class="fa fa-twitter" aria-hidden="true"></a>
+                        <a href="https://<?php echo $insta; ?>" target="_blank" class="fa fa-instagram" aria-hidden="true"></a>
+                        <a href="https://<?php echo $whatsapp; ?>" target="_blank" class="fa fa-whatsapp" aria-hidden="true"></a>
                         <a href="https://<?php echo $email; ?>" target="_blank" class="fa fa-envelope"></a>
                     </p>
 
-               <?php } ?>
                     <h6>Payment Method</h6>
                 <img class="img-fluid" src="images/paystackimg.png" width="200" height="50" alt="Paystack Image">
         </div><!-- row Finish -->
@@ -212,4 +212,13 @@ include("includes/dbcon.php");
         </div><!-- col-md-6 Finish -->
     </div><!-- container-fluid Finish -->
 </div><!-- copyright Finish -->
+
+<!--====== Javascripts & Jquery ======-->
+<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/mixitup.min.js"></script>
+	<script src="js/sly.min.js"></script>
+	<script src="js/jquery.nicescroll.min.js"></script>
+	<script src="js/main.js"></script>
 

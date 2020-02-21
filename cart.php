@@ -21,11 +21,9 @@
     </div>
   </div>
 
-  <div class="container-fluid">
+  <div class="container">
       <div class="row justify-content-center"><!--row begin -->
         <div id="cart" class="col-sm-12"><!-- #Cart col-md-9 Begin -->
-
-          <div class="box"><!-- Box Begin -->
 
             <form action="cart.php" method="post" enctype="multipart/form-data"><!-- Form Begin -->
             
@@ -47,7 +45,7 @@
 
               <div class="table-responsive"><!-- table Responsive Begin -->
 
-                <table class="table" style="color: #f2f1f6;"><!-- table Begin -->
+                <table class="table"><!-- table Begin -->
 
                     <thead><!-- Thead Begin -->
                     
@@ -96,14 +94,14 @@
                       ?>
 
                         <tr>
-                            <td>                           
-                            <img class="img-fluid" src="admin_area/product_images/<?php echo $product_img1; ?>" alt="product_image">
+                            <td class="product-col">                           
+                              <img src="admin_area/product_images/<?php echo $product_img1; ?>" alt="product_image">
                             </td>
-
                             <td>
-                                <a href="details.php?pro_id=<?php echo $pro_id; ?>"><?php echo $product_title; ?></a>                          
-                            </td>      
-
+                                <h4 class="pc-title"><?php echo $product_title; ?></h4>
+                                <a href="details.php?pro_id=<?php echo $pro_id; ?>">Edit Product</a>
+                            </td>
+                          
                             <td>                           
                             <?php echo $pro_qty; ?>                            
                             </td> 
@@ -161,7 +159,7 @@
 
                 <div class="pull-right"><!-- pull-right Begin -->
                 
-                    <a href="checkout.php" class="btn btn-primary btn-lg-sm">
+                    <a href="checkout_info.php" class="btn btn-primary btn-lg-sm">
                       Proceed Checkouts <i class="fa fa-chevron-right"></i>
                     </a>
 
@@ -172,8 +170,53 @@
             </form><!-- form Finish -->
 
           </div><!-- Box Finish -->
-         
+          </div><!-- content Finish -->
+          </div>
+        </div><!-- #cart col-md-9 Finish -->   
+</div>
 
+  
+		<div class="card-warp">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="shipping-info">
+							<h4>Shipping method</h4>
+							<p>Select the one you want</p>
+							<div class="shipping-chooes">
+								<div class="sc-item">
+									<input type="radio" name="sc" id="one">
+									<label for="one">Next day delivery<span>&#8358;2000</span></label>
+								</div>
+								<div class="sc-item">
+									<input type="radio" name="sc" id="two">
+									<label for="two">Standard delivery<span>&#8358;1000</span></label>
+								</div>
+								<div class="sc-item">
+									<input type="radio" name="sc" id="three">
+									<label for="three">Personal Pickup<span>Free</span></label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="offset-lg-2 col-lg-6">
+						<div class="cart-total-details">
+							<h4>Cart total</h4>
+							<p>Final Info</p>
+							<ul class="cart-total-card">
+								<li>Subtotal<span> &#8358;<?php echo $total; ?></span></li>
+								<li>Shipping<span>Free</span></li>
+								<li class="total">Total<span> &#8358;<?php echo $total; ?></span></li>
+							</ul>
+							<a class="site-btn btn-full" href="checkout_info.php">Proceed to checkout</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  <!-- Page end -->
+  
           <?php 
 
             function update_cart(){
@@ -202,73 +245,6 @@
           ?>
   
 
-
-
-
-</div><!-- content Finish -->
-          </div>
-
-             <div class="col-sm-12 box"><!-- box same-height headline Begin -->
-                  <h3 class="text-center details-title">Continue Shopping</h3>
-                </div><!-- box same-height headline Finish -->
-
-                
-    <div id="content" class="container"><!-- container-fluid begin -->
-
-      <div class="row"><!-- row begin -->
-
-              <?php
-
-                $get_products = "select * from products order by rand() LIMIT 0,4";
-
-                $run_products = mysqli_query($con, $get_products);
-
-              while($row_products = mysqli_fetch_array($run_products)){
-
-                $pro_id = $row_products['product_id'];
-
-                $pro_title = $row_products['product_title'];
-                
-                $pro_img1 = $row_products['product_img1'];
-
-                $pro_price = $row_products['product_price']; 
-                echo "
-
-        <div class='top-box'><!-- Box Begin -->
-
-                <table class='table'><!-- table Begin -->
-
-                    <tbody>
-                     <tr>
-                         <td colspan='8'>
-                         <a href='details.php?pro_id=$pro_id'>
-                              
-                         <img class='pro-images' src='admin_area/product_images/$pro_img1' alt='product_image'><br>
-                            
-                                <span class='pro-name'>$pro_title </span><br>
-                                  <span class='pro-price'> &#8358; $pro_price </span> 
-                             
-                     </a>
-                         </td>
-                      </tr>
-                    </tbody>
-
-                </table>
-        </div>
-        
-
-                    ";
-              }
-
-
-
-
-              ?>
-      </div><!-- container-fluid Finish -->
-          </div><!-- same-height-row Finish -->
-
-        </div><!-- #cart col-md-9 Finish -->   
-</div>
 
     
             

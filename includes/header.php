@@ -63,7 +63,7 @@ if(isset($_GET['pro_id'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>zanga wears</title>
+    <title>zangawears</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -88,6 +88,10 @@ if(isset($_GET['pro_id'])){
 
 
 <body>
+  <!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
       
       <?php  
        $get_logo = "select * from logo";
@@ -111,7 +115,7 @@ if(isset($_GET['pro_id'])){
               <div class="row justify-content-center">
                 <div class="col-lg-2 text-center text-lg-left">
                   <!-- logo -->
-                  <a href="./index.php" class="site-logo">               
+                  <a href="./index.php" class="site-logo">             
                  
                   <span class="logo-head"><?php echo $b_name; ?> </span>
                   </a>
@@ -142,7 +146,7 @@ if(isset($_GET['pro_id'])){
                   </div>
                   <div class="up-item">
                     <div class="shopping-card">
-                      <i class="fa fa-shopping-cart"></i>
+                      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                       <span><?php items(); ?></span>
                     </div>
                     <a href="cart.php">Cart</a>
@@ -168,7 +172,7 @@ if(isset($_GET['pro_id'])){
                       <li class="nav-item <?php if($active=='Home') echo'active'; ?>"><a class="nav-link" href="index.php" >Home</a></li>
                     <li class="nav-item <?php if($active=='Shop') echo'active'; ?>"><a class="nav-link" href="showroom.php">Showroom</a></li>
 
-                    <li class="nav-item">
+                    <li class="nav-item <?php if($active=='Account') echo'active'; ?>">
                           <?php        
                              if(!isset($_SESSION['customer_email'])){
 

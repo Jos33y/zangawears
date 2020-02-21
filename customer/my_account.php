@@ -6,23 +6,22 @@
 </header>
 
 <div id="content"><!-- content Begin -->
-    <div class="container-fluid"><!-- container Begin -->
-    <div class="row">
-        <div class="col-sm-12"><!-- col-md-12 Begin -->
-            <nav aria-label="breadcrumb">
-            <ol class="breadcrumb"><!-- breadcrumb Begin -->
-                <li class="breadcrumb-item">
-                    <a href="../index.php">Home</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">
-                    My Account
-                </li>
-            </ol><!-- breadcrumb Finish -->
-            
-            
-</nav>
-        </div><!-- col-md-12 Finish -->
-</div>
+    <div class="container"><!-- container-fluid Begin -->
+        <div class="row">
+            <div class="col-md-12"><!-- col-md-12 Begin -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb"><!-- breadcrumb Begin -->
+                        <li class="breadcrumb-item">
+                            <a href="index.php">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            My Account
+                        </li>
+                    </ol><!-- breadcrumb Finish -->
+                </nav>
+            </div><!-- col-md-12 Finish -->
+        </div>
+    </div>
 
 <div class="row"><!--row begin -->
 

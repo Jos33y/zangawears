@@ -1,4 +1,4 @@
-<div class="container-fluid"><!-- container Begin-->
+<div class="container"><!-- container Begin-->
 
 <?php 
 
@@ -32,167 +32,102 @@ $customer_zip = $row_customer['customer_zip'];
 
 $customer_image = $row_customer['customer_image'];
 
-
-$get_chat_user = "select * from chat_users where user_email='$customer_email'";
-
-$run_chat = mysqli_query($con, $get_chat_user);
-
-$row_chat = mysqli_fetch_array($run_chat);
-
-$users_id = $row_chat['users_id'];
-
-
-
-
-
-
 ?>
 
-<h2 class="text-center display-5"> Edit Your Account </h2>
-<hr>
-
-<form action="" method="post" enctype="multipart/form-data">
-
-<div class="form-group"><!--form-group Begin -->
-
-<div class="form-row">
-    <div class="col">
-    <input type="text" name="c_firstname" class="form-control" value="<?php echo $firstname; ?>" required>
-    </div>
-    <div class="col">
-    <input type="text" name="c_lastname" class="form-control" value="<?php echo $lastname; ?>" required>
-    </div>
-</div>
-
-</div><!--form-group Finish -->
-
-    <div class="form-group"><!--form-group Begin -->
-        
-        <label for="email"> Email: </label>
-
-        <input type="text" name="c_email" id="c_email" class="form-control" value="<?php echo $customer_email; ?>" required>
-    
-    </div><!--form-group Finish -->
-
-    <div class="form-group"><!--form-group Begin -->
-
-        <label for="Phone">Phone Number: </label>
-
-        <input type="text" name="c_phone" id="c_phone" class="form-control" value="<?php echo $customer_phone; ?>">
-
-    </div><!--form-group Finish -->
-
-    <div class="form-group"><!--form-group Begin -->
-
-        <label for="Address"> Address: </label>
-
-        <textarea name="c_address" id="c_address" cols="20" rows="5"class="form-control"><?php echo $customer_address; ?></textarea>
-
-    </div><!--form-group Finish -->
+<h4 class="text-center contact-title"> Edit Your Account </h4>
 
 
-    <div class="form-group"><!--form-group Begin -->
-    <label for="city" class="control-label">City: </label>
-                <label for="City" class="sr-only"> Phone: </label>
-
+<form action="" method="post" enctype="multipart/form-data" class="contact-form">
+        <div class="row">
+            <div class="form-group col-md-6"><!--form-group Begin -->
+                <label for="Name">First Name</label>
+                <input type="text" name="c_firstname" class="form-control" value="<?php echo $firstname; ?>" required>
+            </div>
+            <div class="form-group col-md-6"><!--form-group Begin -->
+                <label for="Name">Last Name</label>
+                <input type="text" name="c_lastname" class="form-control" value="<?php echo $lastname; ?>" required>
+            </div>
+            <div class="form-group col-md-6"><!--form-group Begin -->     
+                <label for="email"> Email </label>
+                <input type="text" name="c_email" id="c_email" class="form-control" value="<?php echo $customer_email; ?>" required>
+            </div><!--form-group Finish -->
+            <div class="form-group col-md-6"><!--form-group Begin -->
+                <label for="Phone">Phone Number </label>
+                <input type="text" name="c_phone" id="c_phone" class="form-control" value="<?php echo $customer_phone; ?>">
+            </div><!--form-group Finish -->
+            <div class="form-group col-md-6"><!--form-group Begin -->
+                <label for="Address"> Address </label>
+                <input type="text" name="c_address" id="c_address" class="form-control" value="<?php echo $customer_address; ?>">
+            </div><!--form-group Finish -->
+            <div class="form-group col-md-6"><!--form-group Begin -->
+                <label for="city" class="control-label">City </label>
                 <input type="text" name="c_city" class="form-control" value="<?php echo $customer_city; ?>">
-
-                </div><!--form-group Finish -->
-
-
-
-            <div class="form-group">
-        <label for="state" class="control-label">State:</label>
-            <select type="text" name="c_state" class="form-control">
-                <option value="<?php echo $customer_state; ?>"> <?php echo $customer_state; ?> </option>
-                <option value="Abia">Abia</option>
-                <option value="Adamawa">Adamawa</option>
-                <option value="Akwa Ibom">Akwa Ibom</option>
-                <option value="Anambra">Anambra</option>
-                <option value="Bauchi">Bauchi</option>
-                <option value="Bayelsa">Bayelsa</option>
-                <option value="Benue">Benue</option>
-                <option value="Borno">Borno</option>
-                <option value="Cross Rive">Cross River</option>
-                <option value="Delta">Delta</option>
-                <option value="Ebonyi">Ebonyi</option>
-                <option value="Edo">Edo</option>
-                <option value="Ekiti">Ekiti</option>
-                <option value="Enugu">Enugu</option>
-                <option value="FCT">Federal Capital Territory</option>
-                <option value="Gombe">Gombe</option>
-                <option value="Imo">Imo</option>
-                <option value="Jigawa">Jigawa</option>
-                <option value="Kaduna">Kaduna</option>
-                <option value="Kano">Kano</option>
-                <option value="Katsina">Katsina</option>
-                <option value="Kebbi">Kebbi</option>
-                <option value="Kogi">Kogi</option>
-                <option value="Kwara">Kwara</option>
-                <option value="Lagos">Lagos</option>
-                <option value="Nasarawa">Nasarawa</option>
-                <option value="Niger">Niger</option>
-                <option value="Ogun">Ogun</option>
-                <option value="Ondo">Ondo</option>
-                <option value="Osun">Osun</option>
-                <option value="Oyo">Oyo</option>
-                <option value="Plateau">Plateau</option>
-                <option value="Rivers">Rivers</option>
-                <option value="Sokoto">Sokoto</option>
-                <option value="Taraba">Taraba</option>
-                <option value="Yobe">Yobe</option>
-                <option value="Zamfara">Zamfara</option>
-            </select>
-        </div>
-
-
-      <div class="form-group"><!--form-group Begin -->
-
-        <div class="form-row">
-            <div class="col">
-            <label for="country" class="control-label">Country: </label>
-            <label for="Country" class="sr-only"> Country </label>
-                         <select name="c_country" id="c_country" class="form-control " required>
-
-                                    <option value="<?php echo $customer_country; ?>"><?php echo $customer_country; ?></option>
-                                    <option value="Nigeria" selected>Nigeria</option>
-                        </select>
+            </div><!--form-group Finish -->
+            <div class="form-group col-md-6">
+                 <label for="state" class="control-label">State</label>
+                 <select type="text" name="c_state" class="form-control">
+                    <option value="<?php echo $customer_state; ?>"> <?php echo $customer_state; ?> </option>
+                    <option value="Abia">Abia</option>
+                    <option value="Adamawa">Adamawa</option>
+                    <option value="Akwa Ibom">Akwa Ibom</option>
+                    <option value="Anambra">Anambra</option>
+                    <option value="Bauchi">Bauchi</option>
+                    <option value="Bayelsa">Bayelsa</option>
+                    <option value="Benue">Benue</option>
+                    <option value="Borno">Borno</option>
+                    <option value="Cross Rive">Cross River</option>
+                    <option value="Delta">Delta</option>
+                    <option value="Ebonyi">Ebonyi</option>
+                    <option value="Edo">Edo</option>
+                    <option value="Ekiti">Ekiti</option>
+                    <option value="Enugu">Enugu</option>
+                    <option value="FCT">Federal Capital Territory</option>
+                    <option value="Gombe">Gombe</option>
+                    <option value="Imo">Imo</option>
+                    <option value="Jigawa">Jigawa</option>
+                    <option value="Kaduna">Kaduna</option>
+                    <option value="Kano">Kano</option>
+                    <option value="Katsina">Katsina</option>
+                    <option value="Kebbi">Kebbi</option>
+                    <option value="Kogi">Kogi</option>
+                    <option value="Kwara">Kwara</option>
+                    <option value="Lagos">Lagos</option>
+                    <option value="Nasarawa">Nasarawa</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Ogun">Ogun</option>
+                    <option value="Ondo">Ondo</option>
+                    <option value="Osun">Osun</option>
+                    <option value="Oyo">Oyo</option>
+                    <option value="Plateau">Plateau</option>
+                    <option value="Rivers">Rivers</option>
+                    <option value="Sokoto">Sokoto</option>
+                    <option value="Taraba">Taraba</option>
+                    <option value="Yobe">Yobe</option>
+                    <option value="Zamfara">Zamfara</option>
+                 </select>
             </div>
-            <div class="col">
-            <label for="zip" class="control-label">Zip code:</label>
-            <input type="text" name="c_zip" id="c_zip" class="form-control" value="<?php echo $customer_zip; ?>">
-
+            <div class="form-group col-md-6"><!--form-group Begin -->
+                <label for="country" class="control-label">Country </label>
+                    <select name="c_country" id="c_country" class="form-control " required>
+                        <option value="<?php echo $customer_country; ?>"><?php echo $customer_country; ?></option>
+                        <option value="Nigeria" selected>Nigeria</option>
+                    </select>
             </div>
+            <div class="form-group col-md-6">
+                <label for="zip" class="control-label">Zip code</label>
+                <input type="text" name="c_zip" id="c_zip" class="form-control" value="<?php echo $customer_zip; ?>">
+            </div>
+            <div class="form-group col-md-6"><!--form-group Begin -->
+                <label for="Profilepicture"> Profile Picture</label>
+                <input type="file" name="c_image" id="c_image" class="form-control form-height-custom"><br/>
+                     <img  src="customer_images/<?php echo $customer_image; ?>" alt="<?php echo $customer_image; ?>" class="img-fluid" width="150" height="150">
+            </div><!--form-group Finish -->
         </div>
-
-        </div><!--form-group Finish -->
-
-
-     
-    <div class="form-group"><!--form-group Begin -->
-
-        <label for="Profilepicture"> Profile Picture: </label>
-
-        <input type="file" name="c_image" id="c_image" class="form-control form-height-custom"><br/>
-
-        <img  src="customer_images/<?php echo $customer_image; ?>" alt="<?php echo $customer_image; ?>" class="img-fluid" width="200" height="200">
-
-    </div><!--form-group Finish -->
-
-    <hr>
-
-    <div class="text-center"><!--text-center Begin -->
-
-         <button name="update" class="btn btn-primary"><!--btn btn-primary Begin -->
-
-                <i class="fa fa-user-md"></i> Update Now
-
-         </button><!--btn btn-primary Finish -->
-
-
-    </div><!--text-center Finish -->
-
-
+                <div class="form-group text-center"><!--text-center Begin -->
+                        <button  name="update" class="site-btn">
+                            UPDATE NOW
+                        </button>
+                     </div><!--text-center Finish -->
 </form>
 </div>
 

@@ -6,7 +6,7 @@ include("includes/dbcon.php");
 ?>
 
 <div id="footer"><!-- #footer Begin -->
-    <div class="container-fluid"><!-- container-fluid Begin -->
+    <div class="container"><!-- container-fluid Begin -->
         <div class="row"><!-- row Begin -->
             <div class="col"><!-- col-sm-6 col-md-3 Begin -->
 
@@ -59,8 +59,6 @@ include("includes/dbcon.php");
                 }
 
                 ?></li>
-
-                <li> <a href="../terms.php"> Terms & Condition</a> </li>
                 </ul><!-- ul Finish -->
 
                 <hr class="hiddem-md hidden-lg hidden-sm">
@@ -106,9 +104,9 @@ include("includes/dbcon.php");
              
             <div class="col"><!-- col-sm-6 col-md-3 Begin -->
 
-                <h6>Find Us:</h6>
+                <h6>Find Us</h6>
                 <?php 
-                $customer_id = 2;
+                $customer_id = 3;
                 $get_address = "select * from customer_info where customer_id=$customer_id";
                 $run_address = mysqli_query($conn, $get_address);
                $row_add= mysqli_fetch_array($run_address);
@@ -195,10 +193,10 @@ include("includes/dbcon.php");
 </div><!-- #footer Finish -->
 
 <div class="copyright"><!-- copyright Begin -->
-    <div class="container-fluid clearfix"><!-- container-fluid Begin  -->
+    <div class="container clearfix"><!-- container-fluid Begin  -->
         <div class="col-md-6"><!-- col-md-6 Begin  -->
 <br>
-            <p class="float-left">&copy; Copyright e-acez 2019,</p>
+            <p class="float-left">&copy; Copyright e-acez 2020,</p>
 
 
         </div><!-- col-md-6 Finish -->
@@ -211,4 +209,12 @@ include("includes/dbcon.php");
         </div><!-- col-md-6 Finish -->
     </div><!-- container-fluid Finish -->
 </div><!-- copyright Finish -->
+<!--====== Javascripts & Jquery ======-->
+<script src="../js/jquery-3.2.1.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/owl.carousel.min.js"></script>
+	<script src="../js/mixitup.min.js"></script>
+	<script src="../js/sly.min.js"></script>
+	<script src="../js/jquery.nicescroll.min.js"></script>
+	<script src="../js/main.js"></script>
 

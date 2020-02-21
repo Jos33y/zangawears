@@ -1,13 +1,13 @@
-<div class="container-fluid"><!-- container Begin-->
+<div class="container"><!-- container Begin-->
 
-    <h1 class="text-center display-5"> Change Account Password </h1>
+    <h4 class="text-center contact-title"> Change Account Password  </h4>
 
     <hr>
         <form method="post" enctype="multipart/form-data">
 
             <div class="form-group"><!--form-group Begin -->
                 
-                <label for="name"> Your Old Password: </label>
+                <label for="name"> Your Old Password </label>
 
                 <input type="text" name="old_pass" id="old_pass" class="form-control" required>
             
@@ -15,7 +15,7 @@
 
             <div class="form-group"><!--form-group Begin -->
                 
-                <label for="email"> Your New Password: </label>
+                <label for="email"> Your New Password </label>
 
                 <input type="text" name="new_pass" class="form-control" required>
             
@@ -23,7 +23,7 @@
 
             <div class="form-group"><!--form-group Begin -->
                 
-                <label for="email"> Confirm Your New Password: </label>
+                <label for="email"> Confirm Your New Password </label>
 
                 <input type="text" name="new_pass_again"  class="form-control" required>
             
@@ -31,9 +31,9 @@
 
             <div class="text-center"><!--text-center Begin -->
 
-                <button name="submit" class="btn btn-primary"><!--btn btn-primary Begin -->
+                <button name="submit" class="site-btn"><!--btn btn-primary Begin -->
 
-                        <i class="fa fa-user-md"></i> Change Password
+                         Change Password
 
                 </button><!--btn btn-primary Finish -->
 

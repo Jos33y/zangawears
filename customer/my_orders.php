@@ -1,33 +1,25 @@
 <div class="container">
-<div class="text-center">
-
-    <h1> My Orders</h1>
-
-    <p class="lead"> Your orders in one place</p>
-
-    <p class="text-muted">
-
-    If you have any questions, feel free to <a href="../contactus.php">contact us.</a> Our customer service works 24/7
-    </p>
-
-</div>
-
-<hr>
+                    <div class="text-center contact-title"><!-- Center Begin -->
+                        <h4> My Orders</h4>
+                        <p class="lead"> Your orders in one place</p>
+                        <p class="text-muted ">
+                            If you have any questions, feel free to <a href="../contactus.php">contact us.</a>  </p>
+                    </div><!-- Center Finish  -->
 
 <div class="table-responsive">
 
-    <table class="table table-bordered table-hover" style="color: #f2f1f6;">
+    <table class="table table-bordered table-hover">
 
         <thead>
 
             <tr>
 
-                <th> NO: </th>
-                <th> Due Amount:</th>
-                <th> Invoice No: </th>
-                <th>Order Date: </th>
+                <th> NO </th>
+                <th> Due Amount</th>
+                <th> Invoice No</th>
+                <th>Order Date</th>
                 <th> Paid / Unpaid</th>
-                <th> Status: </th>
+                <th> Status</th>
             </tr>
 
         </thead>
@@ -87,10 +79,6 @@
 
                 <?php  }  ?>
         </tbody>
-
-         
-
     </table>
 </div>
-
 </div>

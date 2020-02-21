@@ -3,13 +3,7 @@ session_start();
 include("includes/dbcon.php");
        
 ?>
-
-
-        
-            
-
-            
-            
+    
 
             <?php 
 
@@ -18,6 +12,7 @@ include("includes/dbcon.php");
                 include("checkout_info.php");
 
             }else{
+                   
                 include("customer_login.php");
 
             }

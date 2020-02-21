@@ -4,19 +4,12 @@
 ?>  
 
 
-<style>
-  
-</style>
-
 <div class="container-fluid home-page-header">
    <?php  
        $get_logo = "select * from logo";
        $run_logo = mysqli_query($con, $get_logo);
 
        $row_logo = mysqli_fetch_array($run_logo);
-
-                $logo_id = $row_logo['logo_id'];
-                $logo = $row_logo['b_logo'];
                 $b_name = $row_logo['b_name'];
 
       ?>
@@ -121,7 +114,7 @@
     <div class="container"><!-- container begin -->
       <div class="row"><!-- row begin -->
         <?php
-          $get_products = "select * from products  order by 1 ASC LIMIT 0,10";
+          $get_products = "select * from products  order by 1 ASC LIMIT 0,20";
 
           $run_products = mysqli_query($db, $get_products);
 
@@ -163,20 +156,6 @@
         include("includes/footer.php");
 
         ?>
-
-
-
-
-  <!--====== Javascripts & Jquery ======-->
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.slicknav.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.nicescroll.min.js"></script>
-	<script src="js/jquery.zoom.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/main.js"></script>
-
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
