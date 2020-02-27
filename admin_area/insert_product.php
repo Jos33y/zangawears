@@ -114,7 +114,7 @@ if(!isset($_SESSION['email'])){
 
                             <div class="col-md-6"><!--col-md-6 Begin --> 
 
-                            <input name="product_img1" type="file" class="form-control form-height-custom" required>
+                            <input name="product_img1" type="file" class="form-control form-height-custom" placeholder="upload image" required>
 
                         </div><!--col-md-6 Finish --> 
 
@@ -126,7 +126,7 @@ if(!isset($_SESSION['email'])){
 
                         <div class="col-md-6"><!--col-md-6 Begin --> 
 
-                            <input name="product_img2" type="file" class="form-control form-height-custom">
+                            <input name="product_img2" type="file" class="form-control form-height-custom" placeholder="upload image">
 
                         </div><!--col-md-6 Finish --> 
 
@@ -138,7 +138,7 @@ if(!isset($_SESSION['email'])){
 
                         <div class="col-md-6"><!--col-md-6 Begin --> 
 
-                            <input name="product_img3" type="file" class="form-control form-height-custom">
+                            <input name="product_img3" type="file" class="form-control form-height-custom" placeholder="upload image">
 
                         </div><!--col-md-6 Finish --> 
 

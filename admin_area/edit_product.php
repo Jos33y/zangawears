@@ -160,7 +160,7 @@ if(!isset($_SESSION['email'])){
 
                             <br>
 
-                            <img src="product_images/<?php echo $p_img1; ?>" width="70" height="70" alt="<?php echo $p_img1; ?>">
+                            <img src="product_images/<?php echo $p_img1; ?>" width="70" height="70" alt="<?php echo $p_img1; ?>" placeholder="upload image">
 
                         </div><!--col-md-6 Finish --> 
 
@@ -176,7 +176,7 @@ if(!isset($_SESSION['email'])){
 
                             <br>
 
-                            <img src="product_images/<?php echo $p_img2; ?>" width="70" height="70" alt="<?php echo $p_img2; ?>">
+                            <img src="product_images/<?php echo $p_img2; ?>" width="70" height="70" alt="<?php echo $p_img2; ?>" placeholder="upload image">
 
                         </div><!--col-md-6 Finish --> 
 
@@ -192,7 +192,7 @@ if(!isset($_SESSION['email'])){
 
                             <br>
 
-                            <img src="product_images/<?php echo $p_img3; ?>" width="70" height="70" alt="<?php echo $p_img3; ?>">
+                            <img src="product_images/<?php echo $p_img3; ?>" width="70" height="70" alt="<?php echo $p_img3; ?>" placeholder="upload image">
 
                         </div><!--col-md-6 Finish --> 
 
