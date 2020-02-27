@@ -109,11 +109,18 @@ include("includes/dbcon.php");
 
                 <h6>Find Us</h6>
                 <?php 
-                $customer_id = 3;
-            // $get_address = "select * from user_db where user_id=$customer_id";
-                $get_address = "select * from  user_db where user_id=$customer_id";
-                $run_address = mysqli_query($conn, $get_address);
-                $row_add= mysqli_fetch_array($run_address);
+               $get_id = "select * from bank_details";
+
+               $run_id = mysqli_query($con, $get_id);
+
+               $row_id=mysqli_fetch_array($run_id);
+
+               $customer_id = $row_id['owner_id'];
+
+              $get_address = "select * from user_db where user_id=$customer_id";
+              //$get_address = "select * from customer_info where customer_id=$customer_id";
+              $run_address = mysqli_query($conn, $get_address);
+              $row_add= mysqli_fetch_array($run_address);
                     $first_name = $row_add['first_name'];
                     $last_name = $row_add['last_name'];
                     $email = $row_add['email'];
