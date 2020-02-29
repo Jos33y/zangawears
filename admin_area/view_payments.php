@@ -40,7 +40,6 @@ if(!isset($_SESSION['email'])){
                                     <th> Method </th>
                                     <th> Reference No </th>                        
                                     <th> Payment Date </th>
-                                    <th> Print Receipt </th>
                                     <th> Delete Payment </th>
                                 </tr>
                             </thead>
@@ -63,19 +62,12 @@ if(!isset($_SESSION['email'])){
 
                                         $method = $row_payment['payment_mode'];
 
+                                        $amt = $row_payment['amount'];
+
                                         $ref_no = $row_payment['ref_no'];                           
 
                                         $payment_date = $row_payment['payment_date'];  
-
-                                        $get_amt = "select * from customer_orders where invoice_no ='$invoice_no'";
-
-                                        $run_amt= mysqli_query($con, $get_amt);
-                                    
-                                        while($row_amt=mysqli_fetch_array($run_amt)){
-            
-                                            $amt = $row_amt['due_amount'];
-            
-                                          
+                                         
                                          $i++;
 
                                 ?>
@@ -88,13 +80,6 @@ if(!isset($_SESSION['email'])){
                                    
                                     <td> <?php echo $payment_date; ?> </td>
                                     <td> 
-                                        <a style="color:red;font-weight:600;" href="print_receipt.php?print_receipt=<?php echo $payment_id; ?>" target="_blank" >
-
-                                            <i class="fa fa-print"></i> Print
-
-                                        </a>                                        
-                                    </td>
-                                    <td> 
                                         <a href="index.php?delete_payment=<?php echo $payment_id; ?>" >
 
                                             <i class="fa fa-trash-o"></i> Delete
@@ -103,7 +88,7 @@ if(!isset($_SESSION['email'])){
                                     </td>
                                 </tr>
 
-                                    <?php } }?>
+                                    <?php } ?>
 
                             </tbody>
 

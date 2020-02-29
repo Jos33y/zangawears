@@ -159,8 +159,8 @@
 
                 <div class="pull-right"><!-- pull-right Begin -->
                 
-                    <a href="checkout_info.php" class="btn btn-primary btn-lg-sm">
-                      Proceed Checkouts <i class="fa fa-chevron-right"></i>
+                    <a href="showroom.php" class="btn btn-primary btn-lg-sm">
+                      Continue Shopping <i class="fa fa-chevron-right"></i>
                     </a>
 
                 </div><!-- pull-right Finish -->
@@ -186,11 +186,11 @@
 							<div class="shipping-chooes">
 								<div class="sc-item">
 									<input type="radio" name="sc" id="one">
-									<label for="one">Next day delivery<span>&#8358;2000</span></label>
+									<label for="one">Next day delivery<span>&#8358;___</span></label>
 								</div>
 								<div class="sc-item">
 									<input type="radio" name="sc" id="two">
-									<label for="two">Standard delivery<span>&#8358;1000</span></label>
+									<label for="two">Standard delivery<span>&#8358;___</span></label>
 								</div>
 								<div class="sc-item">
 									<input type="radio" name="sc" id="three">
@@ -208,7 +208,7 @@
 								<li>Shipping<span>Free</span></li>
 								<li class="total">Total<span> &#8358;<?php echo $total; ?></span></li>
 							</ul>
-							<a class="site-btn btn-full" href="checkout_info.php">Proceed to checkout</a>
+							<a class="site-btn btn-full" href="checkout.php">Proceed to checkout</a>
 						</div>
 					</div>
 				</div>

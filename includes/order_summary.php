@@ -76,18 +76,6 @@ $count =mysqli_num_rows($run_cart);
 								</div>
 								<div class="payment-method">
 									<div class="pm-item">
-										<input type="radio" name="pm" id="one">
-										<label for="one">Paypal</label>
-									</div>
-									<div class="pm-item">
-										<input type="radio" name="pm" id="two">
-										<label for="two">Cash on delievery</label>
-									</div>
-									<div class="pm-item">
-										<input type="radio" name="pm" id="three">
-										<label for="three">Credit card</label>
-									</div>
-									<div class="pm-item">
 										<input type="radio" name="pm" id="four" checked>
 										<label for="four">Direct bank transfer</label>
 									</div>

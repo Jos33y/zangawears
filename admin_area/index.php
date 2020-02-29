@@ -12,17 +12,19 @@ if(!isset($_SESSION['email'])){
 }else{
     $admin_session = $_SESSION['email'];
 
-    $get_admin = "select * from user_db where email = '$admin_session'";
+    //get_admin = "select * from user_db where email = '$admin_session'";
+
+    $get_admin = "select * from customer_info where email = '$admin_session'";
 
     $run_admin = mysqli_query($conn, $get_admin);
 
     $row_admin = mysqli_fetch_array($run_admin);
 
-    $admin_id = $row_admin['user_id'];
+    $admin_id = $row_admin['customer_id'];
 
-    $admin_name = $row_admin['first_name'];
+    $admin_name = $row_admin['firstname'];
 
-    $admin_name2 = $row_admin['last_name'];
+    $admin_name2 = $row_admin['lastname'];
 
     $shop_name = $row_admin['business_name'];
 

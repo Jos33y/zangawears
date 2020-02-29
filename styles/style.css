@@ -1172,8 +1172,8 @@ table .table{
 
 .order-card {
 	background: #ebebeb;
-	padding: 34px 40px;
-	border: 2px solid #f4f2f8;
+	padding: 24px 30px;
+	border: 1px solid #f4f2f8;
 }
 
 .order-card .btn-full {
@@ -1218,7 +1218,7 @@ table .table{
 
 .payment-method {
 	background: #f5f5f5;
-	padding: 35px 55px 15px;
+	padding: 25px 45px 10px;
 	margin-top: 80px;
 }
 

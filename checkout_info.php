@@ -90,8 +90,7 @@ $customer_zip = $row_customer['customer_zip'];
       <header class="header-section">
             <div class="top-header-top">
           <div class="header-top">
-        
-         
+                 
               <div class="row justify-content-center">
                 <div class="col-lg-2 text-center text-lg-left">
                   <!-- logo -->
@@ -320,6 +319,6 @@ if($run_customer){
 
     echo "<script>alert('Address Saved Successfully')</script>";
 
-    echo "<script>window.open('payment_options.php', '_self')</script>";
+    echo "<script>window.open('orders.php?c_id=<?php echo $update_id; ?>', '_self')</script>";
 }
 }

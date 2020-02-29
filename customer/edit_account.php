@@ -168,18 +168,11 @@ if(isset($_POST['update'])){
 
     $run_customer = mysqli_query($con, $update_customer);
 
-    $update_chat = "update chat_users set user_name='$c_firstname', user_email='$c_email', user_profile='$c_image' where users_id='$users_id'";
-
-    $run_chat = mysqli_query($con, $update_chat);
-
     if($run_customer){ 
-        if($run_chat){
-
+       
         echo "<script>alert('Your account has been edited, to see the changes please relogin')</script>";
 
         echo "<script>window.open('logout.php', '_self')</script>";
-
-    }
 
 }
        
