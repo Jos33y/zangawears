@@ -12,9 +12,9 @@ if(!isset($_SESSION['email'])){
 }else{
     $admin_session = $_SESSION['email'];
 
-    //get_admin = "select * from user_db where email = '$admin_session'";
+    $get_admin = "select * from user_db where email = '$admin_session'";
 
-    $get_admin = "select * from customer_info where email = '$admin_session'";
+    //$get_admin = "select * from customer_info where email = '$admin_session'";
 
     $run_admin = mysqli_query($conn, $get_admin);
 
